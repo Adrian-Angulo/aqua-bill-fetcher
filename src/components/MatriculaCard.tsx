@@ -1,8 +1,9 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Calendar, Home } from "lucide-react";
 import { Matricula } from "@/data/mockMatriculas";
 import { useNavigate } from "react-router-dom";
+import { getEstadoColor } from "@/lib/formatters";
+import MatriculaCardInfo from "./matricula/MatriculaCardInfo";
 
 interface MatriculaCardProps {
   matricula: Matricula;
@@ -10,40 +11,6 @@ interface MatriculaCardProps {
 
 const MatriculaCard = ({ matricula }: MatriculaCardProps) => {
   const navigate = useNavigate();
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('es-CO', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  };
-
-  const getEstadoBadgeVariant = (estado: string) => {
-    switch (estado) {
-      case 'activa':
-        return 'default';
-      case 'suspendida':
-        return 'destructive';
-      case 'inactiva':
-        return 'secondary';
-      default:
-        return 'default';
-    }
-  };
-
-  const getEstadoColor = (estado: string) => {
-    switch (estado) {
-      case 'activa':
-        return 'bg-success hover:bg-success/90';
-      case 'suspendida':
-        return 'bg-warning hover:bg-warning/90';
-      case 'inactiva':
-        return 'bg-muted hover:bg-muted/90';
-      default:
-        return '';
-    }
-  };
 
   const handleClick = () => {
     navigate(`/matricula/${matricula.id}`);
@@ -68,22 +35,12 @@ const MatriculaCard = ({ matricula }: MatriculaCardProps) => {
               </Badge>
             </div>
             
-            <div className="space-y-2">
-              <div className="flex items-start gap-2 text-sm text-muted-foreground">
-                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-primary" />
-                <span>{matricula.direccion}</span>
-              </div>
-              
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Calendar className="w-4 h-4 text-primary" />
-                <span>Creada: {formatDate(matricula.fechaCreacion)}</span>
-              </div>
-
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Home className="w-4 h-4 text-primary" />
-                <span className="capitalize">{matricula.tipoPropiedad} - Estrato {matricula.estrato}</span>
-              </div>
-            </div>
+            <MatriculaCardInfo 
+              direccion={matricula.direccion}
+              fechaCreacion={matricula.fechaCreacion}
+              tipoPropiedad={matricula.tipoPropiedad}
+              estrato={matricula.estrato}
+            />
           </div>
 
           <div className="text-right">
