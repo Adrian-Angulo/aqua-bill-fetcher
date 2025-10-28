@@ -16,7 +16,7 @@ const Index = () => {
             </div>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-3">
-            Portal de Acueducto
+            Acueducto
           </h1>
           <p className="text-lg text-muted-foreground">
             Sistema de consulta de facturas y matrículas
