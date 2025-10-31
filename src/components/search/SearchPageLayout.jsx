@@ -1,16 +1,8 @@
-import { ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, LucideIcon } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
-interface SearchPageLayoutProps {
-  icon: LucideIcon;
-  title: string;
-  subtitle: string;
-  children: ReactNode;
-}
-
-const SearchPageLayout = ({ icon: Icon, title, subtitle, children }: SearchPageLayoutProps) => {
+const SearchPageLayout = ({ icon: Icon, title, subtitle, children }) => {
   const navigate = useNavigate();
 
   return (

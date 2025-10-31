@@ -1,16 +1,11 @@
 import { Card } from "@/components/ui/card";
 import { FileText, Calendar } from "lucide-react";
-import { Invoice } from "@/data/mockInvoices";
 import { toast } from "@/hooks/use-toast";
 import { formatCurrency, formatDate } from "@/lib/formatters";
 import InvoiceCardHeader from "./invoice/InvoiceCardHeader";
 import InvoiceCardActions from "./invoice/InvoiceCardActions";
 
-interface InvoiceCardProps {
-  invoice: Invoice;
-}
-
-const InvoiceCard = ({ invoice }: InvoiceCardProps) => {
+const InvoiceCard = ({ invoice }) => {
   const handleView = () => {
     toast({
       title: "Vista previa",

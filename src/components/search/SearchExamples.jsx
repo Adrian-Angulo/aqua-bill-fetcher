@@ -1,11 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-interface SearchExamplesProps {
-  examples: string[];
-  onExampleClick: (example: string) => void;
-}
-
-const SearchExamples = ({ examples, onExampleClick }: SearchExamplesProps) => {
+const SearchExamples = ({ examples, onExampleClick }) => {
   return (
     <div className="mt-8 pt-6 border-t border-border">
       <h3 className="font-semibold text-foreground mb-3">Ejemplos para probar:</h3>

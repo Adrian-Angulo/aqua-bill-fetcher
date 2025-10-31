@@ -27,7 +27,6 @@ const MatriculaDetail = () => {
     );
   }
 
-
   return (
     <div className="min-h-screen bg-gradient-subtle">
       <div className="container mx-auto px-4 py-8 max-w-4xl">
@@ -60,7 +59,6 @@ const MatriculaDetail = () => {
 
           <MatriculaDetailServices servicios={matricula.servicios} />
 
-          {/* Additional Info Card */}
           <Card className="p-8 shadow-card bg-gradient-flow">
             <div className="text-center text-primary-foreground">
               <h3 className="text-xl font-bold mb-2">

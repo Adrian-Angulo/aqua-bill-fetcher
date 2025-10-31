@@ -1,15 +1,10 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Matricula } from "@/data/mockMatriculas";
 import { useNavigate } from "react-router-dom";
 import { getEstadoColor } from "@/lib/formatters";
 import MatriculaCardInfo from "./matricula/MatriculaCardInfo";
 
-interface MatriculaCardProps {
-  matricula: Matricula;
-}
-
-const MatriculaCard = ({ matricula }: MatriculaCardProps) => {
+const MatriculaCard = ({ matricula }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {

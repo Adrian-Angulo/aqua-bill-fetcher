@@ -3,12 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Home } from "lucide-react";
 import { getEstadoColor } from "@/lib/formatters";
 
-interface MatriculaDetailHeaderProps {
-  numeroMatricula: string;
-  estado: string;
-}
-
-const MatriculaDetailHeader = ({ numeroMatricula, estado }: MatriculaDetailHeaderProps) => {
+const MatriculaDetailHeader = ({ numeroMatricula, estado }) => {
   return (
     <Card className="p-8 shadow-card">
       <div className="flex items-start justify-between gap-4 flex-wrap mb-6">

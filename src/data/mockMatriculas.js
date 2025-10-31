@@ -1,18 +1,4 @@
-export interface Matricula {
-  id: string;
-  numeroMatricula: string;
-  customerId: string;
-  customerName: string;
-  direccion: string;
-  estado: 'activa' | 'suspendida' | 'inactiva';
-  fechaCreacion: string;
-  estrato: number;
-  tipoPropiedad: 'residencial' | 'comercial' | 'industrial';
-  metrosCuadrados: number;
-  servicios: string[];
-}
-
-export const mockMatriculas: Matricula[] = [
+export const mockMatriculas = [
   {
     id: '1',
     numeroMatricula: 'MAT-2020-1001',
@@ -93,7 +79,7 @@ export const mockMatriculas: Matricula[] = [
   }
 ];
 
-export const searchMatriculas = (searchTerm: string): Matricula[] => {
+export const searchMatriculas = (searchTerm) => {
   const normalizedSearch = searchTerm.trim().toUpperCase();
   
   return mockMatriculas.filter(matricula => 

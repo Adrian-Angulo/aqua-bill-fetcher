@@ -2,15 +2,6 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
 
-interface SearchFormProps {
-  searchTerm: string;
-  onSearchTermChange: (value: string) => void;
-  onSearch: () => void;
-  placeholder: string;
-  label: string;
-  helperText: string;
-}
-
 const SearchForm = ({
   searchTerm,
   onSearchTermChange,
@@ -18,8 +9,8 @@ const SearchForm = ({
   placeholder,
   label,
   helperText,
-}: SearchFormProps) => {
-  const handleKeyPress = (e: React.KeyboardEvent) => {
+}) => {
+  const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
       onSearch();
     }

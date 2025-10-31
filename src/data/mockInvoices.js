@@ -1,16 +1,4 @@
-export interface Invoice {
-  id: string;
-  invoiceNumber: string;
-  customerId: string;
-  customerName: string;
-  date: string;
-  amount: number;
-  status: 'pagada' | 'mora';
-  dueDate: string;
-  period: string;
-}
-
-export const mockInvoices: Invoice[] = [
+export const mockInvoices = [
   {
     id: '1',
     invoiceNumber: 'FAC-2024-001',
@@ -79,7 +67,7 @@ export const mockInvoices: Invoice[] = [
   }
 ];
 
-export const searchInvoices = (searchTerm: string): Invoice[] => {
+export const searchInvoices = (searchTerm) => {
   const normalizedSearch = searchTerm.trim().toUpperCase();
   
   return mockInvoices.filter(invoice => 

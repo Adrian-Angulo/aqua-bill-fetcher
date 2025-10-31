@@ -1,13 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Eye, Download, Share2 } from "lucide-react";
 
-interface InvoiceCardActionsProps {
-  onView: () => void;
-  onDownload: () => void;
-  onShare: () => void;
-}
-
-const InvoiceCardActions = ({ onView, onDownload, onShare }: InvoiceCardActionsProps) => {
+const InvoiceCardActions = ({ onView, onDownload, onShare }) => {
   return (
     <div className="flex gap-2 flex-wrap">
       <Button 

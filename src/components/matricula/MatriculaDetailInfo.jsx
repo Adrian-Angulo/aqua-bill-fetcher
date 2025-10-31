@@ -1,16 +1,6 @@
 import { MapPin, User, Calendar, Home, Ruler } from "lucide-react";
 import { formatDate } from "@/lib/formatters";
 
-interface MatriculaDetailInfoProps {
-  direccion: string;
-  customerName: string;
-  customerId: string;
-  fechaCreacion: string;
-  tipoPropiedad: string;
-  metrosCuadrados: number;
-  estrato: number;
-}
-
 const MatriculaDetailInfo = ({
   direccion,
   customerName,
@@ -19,7 +9,7 @@ const MatriculaDetailInfo = ({
   tipoPropiedad,
   metrosCuadrados,
   estrato,
-}: MatriculaDetailInfoProps) => {
+}) => {
   return (
     <div className="grid md:grid-cols-2 gap-6">
       <div className="space-y-4">

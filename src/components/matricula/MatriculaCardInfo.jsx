@@ -1,14 +1,7 @@
 import { MapPin, Calendar, Home } from "lucide-react";
 import { formatDate } from "@/lib/formatters";
 
-interface MatriculaCardInfoProps {
-  direccion: string;
-  fechaCreacion: string;
-  tipoPropiedad: string;
-  estrato: number;
-}
-
-const MatriculaCardInfo = ({ direccion, fechaCreacion, tipoPropiedad, estrato }: MatriculaCardInfoProps) => {
+const MatriculaCardInfo = ({ direccion, fechaCreacion, tipoPropiedad, estrato }) => {
   return (
     <div className="space-y-2">
       <div className="flex items-start gap-2 text-sm text-muted-foreground">

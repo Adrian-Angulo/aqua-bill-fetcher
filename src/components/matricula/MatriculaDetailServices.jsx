@@ -1,11 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Droplet } from "lucide-react";
 
-interface MatriculaDetailServicesProps {
-  servicios: string[];
-}
-
-const MatriculaDetailServices = ({ servicios }: MatriculaDetailServicesProps) => {
+const MatriculaDetailServices = ({ servicios }) => {
   return (
     <Card className="p-8 shadow-card">
       <div className="flex items-center gap-3 mb-6">
